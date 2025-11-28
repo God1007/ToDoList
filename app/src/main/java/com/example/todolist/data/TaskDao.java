@@ -25,4 +25,7 @@ public interface TaskDao {
 
     @Query("SELECT * FROM tasks WHERE completed = 0 ORDER BY createdAt DESC")
     LiveData<List<Task>> getActiveTasks();
+
+    @Query("SELECT strftime('%Y-%m-%d', createdAt/1000, 'unixepoch') AS date, COUNT(*) AS count FROM tasks GROUP BY date ORDER BY date ASC")
+    LiveData<List<TaskDailyCount>> getDailyCounts();
 }

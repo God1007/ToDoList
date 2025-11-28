@@ -42,6 +42,7 @@ dependencies {
     implementation(libs.lifecycle.viewmodel)
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)
+    implementation("com.github.PhilJay:MPAndroidChart:3.1.0")
     annotationProcessor(libs.room.compiler)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)

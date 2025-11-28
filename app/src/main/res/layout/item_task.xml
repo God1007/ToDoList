@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonEdit"
         app:layout_constraintStart_toEndOf="@id/checkboxCompleted"
         app:layout_constraintTop_toTopOf="@id/checkboxCompleted"
         tools:text="Buy groceries" />
@@ -32,9 +32,33 @@
         android:layout_marginTop="4dp"
         android:alpha="0.7"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonEdit"
         app:layout_constraintStart_toStartOf="@id/taskTitle"
         app:layout_constraintTop_toBottomOf="@id/taskTitle"
         tools:text="Apr 20, 2024 6:00 PM" />
+
+    <ImageButton
+        android:id="@+id/buttonEdit"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:contentDescription="@string/edit_task"
+        android:padding="6dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:srcCompat="@android:drawable/ic_menu_edit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonDelete"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/buttonDelete"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:contentDescription="@string/delete_task"
+        android:padding="6dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:srcCompat="@android:drawable/ic_menu_delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
