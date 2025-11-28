@@ -35,4 +35,12 @@ public class TaskRepository {
     public void updateTask(Task task) {
         executor.execute(() -> taskDao.update(task));
     }
+
+    public void deleteTask(Task task) {
+        executor.execute(() -> taskDao.delete(task));
+    }
+
+    public LiveData<List<TaskDailyCount>> getDailyCounts() {
+        return taskDao.getDailyCounts();
+    }
 }
